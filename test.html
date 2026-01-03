@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg, #eef4ff, #ffffff);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* หัวใจลอย */
+    .heart {
+        position: absolute;
+        bottom: -50px;
+        color: rgba(70, 130, 255, 0.6);
+        animation: floatUp linear infinite;
+        user-select: none;
+    }
+
+    @keyframes floatUp {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-110vh);
+            opacity: 0;
+        }
+    }
+
+    /* การ์ด */
+    .card {
+        position: relative;
+        z-index: 10;
+        width: 330px;
+        background: #fff;
+        border-radius: 25px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .date {
+        font-size: 14px;
+        color: #6b8cff;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin: 5px 0 15px;
+        color: #3a6bff;
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 5px solid #e6ecff;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .message {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .next {
+        margin-top: 20px;
+        padding: 12px;
+        background: #3a6bff;
+        color: #fff;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .next:hover {
+        background: #2f55cc;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- การ์ด -->
+    <div class="card">
+        <div class="date">DECEMBER 28, 2025</div>
+        <h1>Happy Birthday Cake🎂</h1>
+
+        <!-- 🔽🔽 ใส่รูปของคุณตรงนี้ 🔽🔽 -->
+        <img src="new-hachiware-CgedCll1.jpg" class="avatar">
+        <!-- ตัวอย่าง: <img src="cake.png" class="avatar"> -->
+
+        <div class="message">
+            “สุขสันต์วันเกิดนะครับ ขอให้ชีวิตเต็มไปด้วยรอยยิ้ม  
+            ความสุข และคนที่รักอยู่ข้างๆ เสมอ  
+            ขอให้ปีนี้เป็นปีที่ดี เจอแต่เรื่องดีๆ  
+            ยิ้มได้ทุกวัน และสุขภาพแข็งแรงครับ  
+            ถึงจะเจองานหนักบ้าง ก็ขอให้ผ่านมันไปได้ด้วยดีนะครับคนเก่ง 💙💕 💗
+”
+        </div>
+
+        <div class="next">HAPPY BIRTHDAY NAKUB
+            ILADA CHAIJANTUEK ^w^</div>
+    </div>
+
+<script>
+    // สร้างหัวใจลอย
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💙";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        heart.style.animationDuration = Math.random() * 5 + 6 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 10000);
+    }
+
+    setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
